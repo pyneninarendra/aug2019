@@ -2,5 +2,11 @@
 var myApp = angular.module('myApp', []);
 
 myApp.controller("myCtrl", function($scope) {
-    $scope.msg = "Welcome to Angular Controllers"
+    $scope.fullName = '';
+    $scope.firstName = 'Narendra';
+    $scope.getFullName = function() {
+        if ($scope.firstName && $scope.lastName) {
+            $scope.fullName = $scope.firstName + ' ' + $scope.lastName;
+        }
+    }
 });

@@ -12,6 +12,7 @@
     <title>Angular Demo</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Bootstrap 4 Version -->
     <link rel="stylesheet" href="css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/font-awesome.css" />
 </head>
@@ -22,7 +23,20 @@
         <![endif]-->
     <div class="container mt-2">
         <h2 class="text-center">Angular Initial</h2>
-        <p ng-bind="msg" class="alert alert-info"></p>
+        <form class="form-horizontal">
+            <div class="form-group">
+                <Label for="firstName">First Name</Label>
+                <input type="text" class="form-control" placeholder="Enter Your First Name" ng-model="firstName" id="firstName" />
+            </div>
+            <div class="form-group">
+                <Label for="lastName">Last Name</Label>
+                <input type="text" class="form-control" placeholder="Enter Your Last Name" ng-model="lastName" id="lastName" />
+            </div>
+            <div class="form-group">
+                <button type="button" ng-model="btnGetName" class="btn btn-primary" ng-click="getFullName()">Full Name</button>
+            </div>
+            <p ng-bind="fullName" class="alert text-danger"></p>
+        </form>
     </div>
     <script src="js/angular.js"></script>
     <script src="js/angScript.js"></script>
